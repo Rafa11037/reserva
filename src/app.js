@@ -9,7 +9,10 @@ dotenv.config()
 class App {
     constructor() {
         this.server = express()
-        mongoose.connect(process.env.DATABASE, {})
+        mongoose.connect(process.env.DATABASE, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        })
         this.middlewares()
         this.routes()
     }
@@ -18,7 +21,7 @@ class App {
         this.server.use(cors())
         this.server.use(
             '/files',
-            express.static(path.resolve(__dirname,'..', 'uploads'))
+            express.static(path.resolve(__dirname, '..','uploads'))
         )
         this.server.use(express.json())
     }
@@ -28,3 +31,4 @@ class App {
     }
 }
 
+export default new App().server

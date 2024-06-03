@@ -1,17 +1,17 @@
 {
   "name": "reserva",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Projeto criado na Linguagem de Programação\r Curso: Técnico de Informática Integrado ao Ensino Médio\r Instituto federal de São Paulo - Campus Caraguatatuba",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.js"
   },
   "keywords": [
     "Node.JS",
     "MongoDB",
     "JavaScript"
   ],
-  "author": "Rafael Alvim de Mendonça",
+  "author": "Denny Paulista Azevedo Filho",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",

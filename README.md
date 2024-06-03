@@ -4,20 +4,20 @@
 
 ### Desenvolvido em Node.js (versão 20.10)
 
-Projeto criado na Linguagem de Programaçãp
+Projeto criado na Linguagem de Programação
 Curso: Técnico de Informática Integrado ao Ensino Médio
 Instituto federal de São Paulo - Campus Caraguatatuba
 
 #### Pacotes Utilizados
 
-nodemon
-express
-sucrase
-dotenv
-mongoose
-multer
-yup
-cors
+* nodemon
+* express
+* sucrase
+* dotenv
+* mongoose
+* multer
+* yup
+* cors
 
 #### Banco de Dados: MongoDB
 
