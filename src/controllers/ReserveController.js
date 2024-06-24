@@ -30,7 +30,7 @@ class ReserveController {
             return res.status(401).json({ error: 'Reserva não permitida.' });
         }
 
-        const reserve = await Reserve.createIndexes({
+        const reserve = await Reserve.create({
             user: user_id,
             house: house_id,
             date,
@@ -42,6 +42,13 @@ class ReserveController {
         return res.json(reserve);
     }
 
+    async destroy(req, res){
+        const { reserve_id } = req.body;
+
+        await Reserve.FindByIdAndDelete({ _id: reserve_id });
+
+        return res.send();
+    }
 }
 
 export default new ReserveController();
