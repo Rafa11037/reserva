@@ -42,6 +42,7 @@ class HouseController {
             status: Yup.boolean().required(),
         })
         const { filename } = req.file
+        const { house_id } = req.params
         const { description, price, location, status } = req.body
         const { user_id } = req.headers
         if(!(await schema.isValid(req.body))) {
@@ -66,7 +67,7 @@ class HouseController {
     async destroy(req, res) {
         const { house_id } = req.body
         const { user_id } = req.headers
-        const user = await User.dindById(user_id)
+        const user = await User.findById(user_id)
         const houses = await House.findById(house_id)
         if (String(user._id) !== String(houses.user)) {
             return res.status(401).json({ error: 'Não autorizado'})
